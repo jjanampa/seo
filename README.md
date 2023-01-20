@@ -1,6 +1,14 @@
-#instalar
+#instalar ( usar la consola de windows wsl2)
+- clonar o descargar el repositorio (https://github.com/jjanampa/seo)
+  ```
+    git clone git@github.com:jjanampa/seo.git
+  ```
 
-- clonar proyecto desde repositorio
+- incresar a la carpeta descargada
+  ```
+    cd seo
+  ```
+- instalar dependencias
 
   ```
     docker run --rm \
@@ -10,7 +18,7 @@
     laravelsail/php82-composer:latest \
     composer install --ignore-platform-reqs
   ```
-
+- levantar proyecto con docker
   ```
     ./vendor/bin/sail up -d
   ```
