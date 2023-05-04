@@ -18,3 +18,24 @@
         </tbody>
     </table>
 @endforeach
+
+<table>
+    <thead>
+    <tr>
+        <th>Totales</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+        @foreach($items as $word => $texts)
+            @php $count = 0 @endphp
+            @foreach($texts as $text)
+                @php $count = $count +  $text->quantity @endphp
+            @endforeach
+            <tr>
+                <td>{{ $word }}</td>
+                <td>{{ $count }}</td>
+            </tr>
+        @endforeach
+    </tbody>
+</table>
