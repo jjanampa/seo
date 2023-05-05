@@ -8,24 +8,21 @@
   ```
     cd seo
   ```
+- configurar 
+  - crear base de datos
+  - copiar .env.example a .env
+  - en .env configurar acceso a la base de datos creada
+   
+    
 - instalar dependencias
 
   ```
-    docker run --rm \
-    -u "$(id -u):$(id -g)" \
-    -v "$(pwd):/var/www/html" \
-    -w /var/www/html \
-    laravelsail/php82-composer:latest \
-    composer install --ignore-platform-reqs
-  ```
-- levantar proyecto con docker
-  ```
-    ./vendor/bin/sail up -d
+    composer install
   ```
 - ejecutar migraciones de base de datos
-
+  crear base de
   ```
-    ./vendor/bin/sail php artisan migrate
+    php artisan migrate
   ```
 
 #acceder a la web:
